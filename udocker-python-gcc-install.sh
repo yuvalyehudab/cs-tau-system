@@ -1,7 +1,11 @@
 #!/bin/bash
 
+echo "creating a container"
+echo "initialize"
 user=$(whoami)
+echo "user: $user"
 BASE_DIR=/specific/scratches/scratch
+echo "base dir: $BASE_DIR"
 
 # set working directory
 # default: $(BASE_DIR)/$(user)/udocker
