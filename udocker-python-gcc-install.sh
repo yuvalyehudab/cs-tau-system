@@ -11,7 +11,7 @@ BASE_DIR=/specific/scratches/scratch
 # test:
 # run script
 # echo $UDOCKER_DIR
-if [[ -z $UDOCKER_DIR]]; then
+if [[ -z $UDOCKER_DIR ]]; then
     if [[ -z $1 ]]; then
         export UDOCKER_DIR=$(BASE_DIR)/$(user)/udocker
     else
