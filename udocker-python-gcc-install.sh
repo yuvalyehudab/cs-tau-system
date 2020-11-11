@@ -1,8 +1,9 @@
 #!/bin/bash
-
+#change to tcsh?
 echo "creating a container"
 echo "initialize"
 username=$(whoami)
+echo "here"
 echo "user: $username"
 BASE_DIR=/specific/scratches/scratch
 echo "base dir: $BASE_DIR"
