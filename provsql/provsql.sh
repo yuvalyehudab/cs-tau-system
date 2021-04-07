@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UDOCKER_DIR=/vol/scratch/yuvalyehudab/udocker
+UDOCKER_DIR=/vol/scratch/<my-dir>
 export UDOCKER_DIR
 
 echo	'loading ...'
