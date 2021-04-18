@@ -3,15 +3,17 @@
 DEBIAN_FRONTEND=noninteractive
 export DEBIAN_FRONTEND
 
-apt update
-apt upgrade -y
-apt install less git wget curl vim nano build-essential python3 libssl-dev dropbear
-apt install postgresql postgresql-contrib
+if [[ -z ${POSTGRES_PASSWORD}]]; then
+    export POSTGRES_PASSWORD=123
+fi
 
-su postgres
-pg_ctlcluster 12 main start
+apt update && apt upgrade -y
+apt install -y less git wget curl vim nano build-essential python3 libssl-dev dropbear && apt install -y postgresql postgresql-contrib
+
+su postgres -c 'pg_createcluster 12 main -- --username=postgres --pwfile=<(echo ${POSTGRES_PASSWORD})'
 chmod 0600 /etc/ssl/private/ssl-cert-snakeoil.key
-# fix file /etc/postgresql/12/main/pg_hba.conf
+su postgres -c 'pg_ctlcluster 12 main start'
+
 # https://stackoverflow.com/a/18664239
-# pg_createcluster 12 main --start # maybe comment out --start ?
-service postgresql restart
+
+su postgres -c 'service postgresql restart'

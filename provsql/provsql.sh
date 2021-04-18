@@ -7,7 +7,6 @@ echo	'loading ...'
 echo	'chmod psql.sh'
 chmod u+x ./psql.sh
 echo	'pull container'
-echo	'pwd: ${PWD}'
 
 udocker pull ubuntu:20.10 && \
 	echo 'pulled' && \
