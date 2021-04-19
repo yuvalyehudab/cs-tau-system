@@ -8,7 +8,7 @@ if [[ -z ${POSTGRES_PASSWORD}]]; then
 fi
 
 apt update && apt upgrade -y
-apt install -y less git wget curl vim nano build-essential python3 libssl-dev dropbear && apt install -y postgresql postgresql-contrib
+apt install -y less git wget curl vim nano build-essential python3 libssl-dev dropbear postgresql postgresql-contrib
 
 su postgres -c 'pg_createcluster 12 main -- --username=postgres --pwfile=<(echo ${POSTGRES_PASSWORD})'
 chmod 0600 /etc/ssl/private/ssl-cert-snakeoil.key
