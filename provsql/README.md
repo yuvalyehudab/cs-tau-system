@@ -2,7 +2,7 @@
 
 Note: this guide is for users who know what they do - use with care.  
 for any problem, mail: [system@cs.tau.ac.il](system@cs.tau.ac.il), and link to this repo.
-installing postgresql on school servers - based on [https://github.com/PierreSenellart/provsql](https://github.com/PierreSenellart/provsql)
+installing postgresql on school servers - based on [https://github.com/PierreSenellart/provsql](https://github.com/PierreSenellart/provsql) and on [https://github.com/docker-library/postgres.git](https://github.com/docker-library/postgres.git)
 
 To start:
 
