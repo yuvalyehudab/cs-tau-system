@@ -7,3 +7,8 @@ cd ${SCRATCH_DIR}
 
 wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 bash Anaconda3-2020.11-Linux-x86_64.sh -b -p `pwd`/anaconda3
+
+echo "conda env create --name provsql --file ${SCRATCH_DIR}/cs-tau-system/provsql/env.yml"
+echo "conda activate provsql"
+
+echo "conda env update --file ${SCRATCH_DIR}/cs-tau-system/provsql/env.yml --prune"
