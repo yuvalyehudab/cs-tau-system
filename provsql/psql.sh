@@ -24,3 +24,4 @@ su postgres -c 'pg_ctlcluster 12 main start';
 
 su postgres -c 'service postgresql restart';
 echo 'to exit, pls run: service postgresql stop' 
+echo 'or: su postgres -c "pg_ctlcluster 12 main stop"'
