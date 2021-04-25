@@ -101,4 +101,4 @@ conda env update --file /vol/scratch/`whoami`/cs-tau-system/provsql/env.yml --pr
 
 ```
 
-written by yuvalyehudab
+(c) written by yuvalyehudab
