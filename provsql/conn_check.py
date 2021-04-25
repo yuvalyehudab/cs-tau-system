@@ -17,11 +17,14 @@ host = DEFAULT_HOST
 
 def main(password, host, port):
     # create connection
-    conn = psycopg2.connect(database="postgres", user="postgres", password=password, host=host, port=port)
+    try:
+        conn = psycopg2.connect(database="postgres", user="postgres", password=password, host=host, port=port)
 
-    print(conn)
-    conn.close()
-    print ('exit')
+        print(conn)
+        conn.close()
+        print ('suceeded - exits')
+    except:
+        print ('connection failed - did you run the server?')
 
 if (__name__ == '__main__'):
     main(password = password, host=host ,port=port)
