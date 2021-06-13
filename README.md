@@ -15,14 +15,14 @@ ssh c-00[1-8]
 cd <your own directory>
 wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
 bash Anaconda3-2021.05-Linux-x86_64.sh -b -p `pwd`/anaconda3
-/anaconda3/bin/conda init bash
+./anaconda3/bin/conda init bash
 ```
 
 3. Create new env:
 
 ```sh
 bash
-conda create -n <env-name> python=3.8
+conda create -n <env-name> python=3.7
 conda activate <env-name>
 ```
 
@@ -31,5 +31,6 @@ conda activate <env-name>
 ```sh
 conda install matplotlib
 pip install --upgrade pip
+pip install tensorflow-gpu==1.15
 python app.py
 ```
